@@ -42,7 +42,7 @@ public class Buku {
     }
 
     public Buku copy() {
-        return new Buku(idBuku, judul, isbn, tahunTerbit, jumlahHalaman, penerbit, sinopsis);
+        return new Buku(idBuku, judul, isbn, tahunTerbit, jumlahHalaman, penerbit, penulis, sinopsis);
     }
 
     void tampilInfo() {

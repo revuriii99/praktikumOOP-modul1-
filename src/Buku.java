@@ -41,6 +41,10 @@ public class Buku {
         return ((double) sama / total) * 100;
     }
 
+    public Buku copy() {
+        return new Buku(idBuku, judul, isbn, tahunTerbit, jumlahHalaman, penerbit, sinopsis);
+    }
+
     void tampilInfo() {
         System.out.println("  ID Buku       : " + idBuku);
         System.out.println("  Judul         : " + judul);

@@ -8,9 +8,9 @@ public class Buku {
     Penulis[] penulis;
     String sinopsis;
 
-    Buku(String idBuku, String judul, String isbn,
+    public Buku(String idBuku, String judul, String isbn,
          int tahunTerbit, int jumlahHalaman, String penerbit,
-         Penulis[] penulis) {
+         Penulis[] penulis, String sinopsis) {
         this.idBuku        = idBuku;
         this.judul         = judul;
         this.isbn          = isbn;
@@ -18,6 +18,7 @@ public class Buku {
         this.jumlahHalaman = jumlahHalaman;
         this.penerbit      = penerbit;
         this.penulis       = penulis;
+        this.sinopsis        = sinopsis;
     }
 
     void tampilInfo() {

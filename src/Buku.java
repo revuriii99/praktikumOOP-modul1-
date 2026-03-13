@@ -21,6 +21,12 @@ public class Buku {
         this.sinopsis        = sinopsis;
     }
 
+    public int hitungJumlahKata() {
+        if (sinopsis == null || sinopsis.isEmpty()) return 0;
+        String[] kata = sinopsis.trim().split("\\s+");
+        return kata.length;
+    }
+
     void tampilInfo() {
         System.out.println("  ID Buku       : " + idBuku);
         System.out.println("  Judul         : " + judul);

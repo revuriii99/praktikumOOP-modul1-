@@ -27,6 +27,20 @@ public class Buku {
         return kata.length;
     }
 
+    public double cekKesamaan(Buku b) {
+        int sama = 0;
+        int total = 6; // jumlah attribute yang dibandingkan
+
+        if (this.judul.equals(b.judul))           sama++;
+        if (this.isbn.equals(b.isbn))             sama++;
+        if (this.tahunTerbit == b.tahunTerbit)    sama++;
+        if (this.jumlahHalaman == b.jumlahHalaman)sama++;
+        if (this.penerbit.equals(b.penerbit))     sama++;
+        if (this.sinopsis.equals(b.sinopsis))     sama++;
+
+        return ((double) sama / total) * 100;
+    }
+
     void tampilInfo() {
         System.out.println("  ID Buku       : " + idBuku);
         System.out.println("  Judul         : " + judul);

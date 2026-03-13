@@ -6,6 +6,7 @@ public class Buku {
     int      jumlahHalaman;
     String   penerbit;
     Penulis[] penulis;
+    String sinopsis;
 
     Buku(String idBuku, String judul, String isbn,
          int tahunTerbit, int jumlahHalaman, String penerbit,

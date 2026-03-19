@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Buku {
     String   idBuku;
     String   judul;
@@ -43,6 +47,24 @@ public class Buku {
 
     public Buku copy() {
         return new Buku(idBuku, judul, isbn, tahunTerbit, jumlahHalaman, penerbit, penulis, sinopsis);
+    }
+
+    public void bacaFile(String pathFile) {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(pathFile));
+            String baris;
+            while ((baris = br.readLine()) != null) {
+                String[] bagian = baris.split(";");
+                if (bagian.length >= 2) {
+                    this.judul    = bagian[0].trim();
+                    this.penerbit = bagian[1].trim();
+                }
+            }
+            br.close();
+            System.out.println("Berhasil membaca file: " + pathFile);
+        } catch (IOException e) {
+            System.out.println("File tidak ditemukan: " + pathFile);
+        }
     }
 
     void tampilInfo() {

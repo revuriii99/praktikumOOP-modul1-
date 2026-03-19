@@ -77,6 +77,10 @@ public class Buku {
         }
     }
 
+    public double hitungRoyalti(double hargaBuku) {
+        return hargaBuku * 0.10;
+    }
+
     void tampilInfo() {
         System.out.println("  ID Buku       : " + idBuku);
         System.out.println("  Judul         : " + judul);

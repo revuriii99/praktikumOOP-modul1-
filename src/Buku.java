@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Buku {
     String   idBuku;
@@ -64,6 +62,18 @@ public class Buku {
             System.out.println("Berhasil membaca file: " + pathFile);
         } catch (IOException e) {
             System.out.println("File tidak ditemukan: " + pathFile);
+        }
+    }
+
+    public void simpanFile(String namaFile) {
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter(namaFile));
+            bw.write(judul + "; " + penerbit);
+            bw.newLine();
+            bw.close();
+            System.out.println("Berhasil disimpan ke file: " + namaFile);
+        } catch (IOException e) {
+            System.out.println("Gagal menyimpan file: " + namaFile);
         }
     }
 

@@ -81,6 +81,10 @@ public class Buku {
         return hargaBuku * 0.10;
     }
 
+    public double hitungRoyalti(double hargaBuku, double persen) {
+        return hargaBuku * (persen / 100);
+    }
+
     void tampilInfo() {
         System.out.println("  ID Buku       : " + idBuku);
         System.out.println("  Judul         : " + judul);

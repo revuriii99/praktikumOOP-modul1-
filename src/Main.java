@@ -167,6 +167,26 @@ public class Main {
         System.out.println("Hasil copy dari '" + b1.judul + "':");
         b3.tampilInfo();
 
+        System.out.println();
+        garis();
+        System.out.println(" DEMO TUGAS BAB 3");
+        garis();
+
+        Buku contoh = bukuFiksi[0];
+
+        contoh.simpanFile("laskar_pelangi.txt");
+
+        Buku bukuBaru = bukuFiksi[1];
+        bukuBaru.bacaFile("laskar_pelangi.txt");
+        System.out.println("Judul setelah dibaca dari file: " + bukuBaru.judul);
+
+        double harga = 85000;
+        System.out.println("Harga buku     : Rp" + harga);
+        System.out.println("Royalti 10%    : Rp" + contoh.hitungRoyalti(harga));
+
+        double persenCustom = 15;
+        System.out.println("Royalti " + persenCustom + "%  : Rp" + contoh.hitungRoyalti(harga, persenCustom));
+
         garis();
         System.out.println("  Selesai.");
         garis();
